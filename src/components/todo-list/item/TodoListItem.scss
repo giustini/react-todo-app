@@ -63,6 +63,8 @@
     .todo-name {
 
         position: relative;
+        word-break: break-word;
+        max-width: 450px;
 
         &::after {
             content: ' ';
