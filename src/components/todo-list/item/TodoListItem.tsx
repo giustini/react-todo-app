@@ -37,6 +37,7 @@ class TodoListItem extends Component<TodoListItemProps, TodoListItemState> {
                         id={ `checkbox-${ index }` }
                         checked={ !todo.active }
                         onChange={ this.handleCheckTodo }
+                        data-testid="toggle-todo"
                     />
 
                     <label htmlFor={ `checkbox-${ index }` } />
@@ -45,7 +46,11 @@ class TodoListItem extends Component<TodoListItemProps, TodoListItemState> {
 
                 <span className="todo-name">{ todo.name }</span>
 
-                <button className="delete-todo" onClick={ this.handleDeleteTodo }>×</button>
+                <button
+                    className="delete-todo"
+                    onClick={ this.handleDeleteTodo }
+                    data-testid="delete-todo"
+                >×</button>
 
             </div>
         );
