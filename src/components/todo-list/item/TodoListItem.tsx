@@ -14,7 +14,6 @@ interface TodoListItemProps {
     index: number;
 
     onChangeTodo(todo: Todo, index: number): void
-
     onDeleteTodo(index: number): void;
 }
 
@@ -58,14 +57,14 @@ class TodoListItem extends Component<TodoListItemProps, TodoListItemState> {
         const { todo, index } = this.props;
 
         this.props.onChangeTodo({ ...todo, active: !e.target.checked }, index);
-    }
+    };
 
     handleDeleteTodo = () => {
 
         const { index } = this.props;
 
         this.props.onDeleteTodo(index);
-    }
+    };
 }
 
 export default TodoListItem;

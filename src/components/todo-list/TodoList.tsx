@@ -72,7 +72,7 @@ class TodoList extends Component<TodoListProps, TodoListState> {
         };
 
         this.setState({ todos: [ ...this.state.todos, newTodo ] })
-    }
+    };
 
     handleChangeTodo = (todo: Todo, index: number) => {
 
@@ -80,7 +80,7 @@ class TodoList extends Component<TodoListProps, TodoListState> {
         newTodos[ index ].active = todo.active;
 
         this.setState({ todos: newTodos });
-    }
+    };
 
     handleDeleteTodo = (index: number) => {
 
@@ -88,22 +88,22 @@ class TodoList extends Component<TodoListProps, TodoListState> {
         newTodos.splice(index, 1);
 
         this.setState({ todos: newTodos });
-    }
+    };
 
     getActiveTodosCount = (todos: Todo[]) => {
         return todos.filter(todo => todo.active).length;
-    }
+    };
 
     getNotActiveTodosCount = (todos: Todo[]) => {
         return todos.filter(todo => !todo.active).length;
-    }
+    };
 
     handleClearCompleted = () => {
 
         const newTodos = [ ...this.state.todos ];
 
         this.setState({ todos: newTodos.filter(todo => todo.active) });
-    }
+    };
 }
 
 export default TodoList;
