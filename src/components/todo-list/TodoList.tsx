@@ -19,7 +19,12 @@ class TodoList extends Component<TodoListProps, TodoListState> {
         super(props);
 
         this.state = {
-            todos: []
+            todos: [
+                { name: "Aprender LESS", active: true },
+                { name: "Realizar tests en React", active: true },
+                { name: "Animaciones", active: false },
+                { name: "Desplegar aplicación", active: true }
+            ]
         }
     }
 
